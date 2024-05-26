@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Success</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+
+</head>
+<body>
+    <div class="container">
+        <div class="background"></div>
+        <div class="content">
+            <div class="header">
+                <img src="{{ url_for('static', filename='Images/logo.jpg') }}" class="logo">
+
+            </div>
+            <h2>Thank you for subscribing Autointelli! Here are your subscription details</h2>
+
+            <h2>Subscription Details:</h2>
+            <table>
+                <tr>
+                    <th>Plan</th>
+                    <td>{{ subscription_details.plan }}</td>
+                </tr>
+                <tr>
+                    <th>Subscription ID</th>
+                    <td>{{ subscription_details.subscription_id }}</td>
+                </tr>
+                <tr>
+                    <th>Status</th>
+                    <td>{{ subscription_details.status }}</td>
+                </tr>
+                <tr>
+                    <th>Customer Name</th>
+                    <td>{{ subscription_details.customer_name }}</td>
+                </tr>
+                <tr>
+                    <th>Customer Email</th>
+                    <td>{{ subscription_details.customer_email }}</td>
+                </tr>
+                <tr>
+                    <th>Amount</th>
+                    <td>₹{{ subscription_details.amount }}</td>
+                </tr>
+                <tr>
+                    <th>Current Period Start</th>
+                    <td>{{ subscription_details.current_period_start }}</td>
+                </tr>
+                <tr>
+                    <th>Current Period End</th>
+                    <td>{{ subscription_details.current_period_end }}</td>
+                </tr>
+                <tr>
+                    <th>Payment Method</th>
+                    <td>{{ subscription_details.payment_method }}</td>
+                </tr>
+            </table>
+            <p><a href="{{ invoice_url }}">Download Invoice PDF</a></p>
+        </div>
+    </div>
+</body>
+</html>

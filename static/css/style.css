@@ -1,0 +1,55 @@
+body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+            background-image: url("../Images/maxresdefault.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        h1 {
+            color: #007bff;
+        }
+
+        .container {
+            text-align: center;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .container img {
+            border-radius: 50%;
+        }
+
+        button {
+            background-color: #007bff;
+            border: none;
+            color: whitesmoke;
+            padding: 15px 32px;
+            text-align: center;
+            margin: 10px;
+            cursor: pointer;
+            transition-duration: 0.4s;
+            font-size: 16px;
+            width: 180px;
+            border-radius: 100px;
+        }
+
+        button:hover {
+            background-color: black;
+        }
+
+        @media (max-width: 600px) {
+            button {
+                width: 80%;
+                margin: 10px 0;
+            }
+        }

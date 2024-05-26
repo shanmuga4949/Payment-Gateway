@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscription Plan Selection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+
+</head>
+<body>
+
+
+    <form action="{{ url_for('create_checkout_session') }}" method="POST">
+
+        <div class="container">
+            <h1>Autointelli Product</h1>
+            <img src="{{ url_for('static', filename='Images/autointelli_logo.jpeg') }}" , width="100px"><br><br>
+            <button name="subscription_plan" value="daily" type="submit">Daily</button>
+            <button name="subscription_plan" value="monthly" type="submit">Monthly</button>
+            <button name="subscription_plan" value="annual" type="submit">Annual</button>
+        </div>
+
+    </form>
+</body>
+</html>
